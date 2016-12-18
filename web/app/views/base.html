@@ -1,0 +1,55 @@
+<app-loading></app-loading>
+
+<div id="main-wrapper"
+     class="container-fluid full-height">
+
+    <div id="top-nav"
+         [class.transparent]="!_userService.currentUser">
+        <div class="row">
+            <div *ngIf="isLoggedIn()">
+                <div class="col-xs-8">
+                    <navigation></navigation>
+                </div>
+                <div class="col-xs-4 pull-right">
+                    <button class="btn"
+                            title="Upload demos"
+                            (click)="toggleShowDemoUpload()">
+                        <span class="glyphicon glyphicon-arrow-up"></span> Demo
+                    </button>
+
+                    <verdict-dialog></verdict-dialog>
+
+                    <feedback-dialog></feedback-dialog>
+
+                    <button class="btn btn-logout glyphicon glyphicon-off"
+                            title="Logout"
+                            (click)="logout()">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div *ngIf="!displayAdminMenu()"
+             class="col-xs-3">
+            <div>
+                ad?
+            </div>
+        </div>
+
+        <div id="page-body"
+             [class.col-xs-9]="!displayAdminMenu()"
+             [class.col-xs-12]="displayAdminMenu()">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>
+
+<flash-messages></flash-messages>
+
+<div *ngIf="showDemoUploadOverlay"
+     id="demoUploadOverlay">
+    <demo-upload></demo-upload>
+</div>

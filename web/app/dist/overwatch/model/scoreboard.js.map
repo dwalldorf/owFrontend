@@ -1,0 +1,1 @@
+{"version":3,"file":"scoreboard.js","sourceRoot":"","sources":["../../../overwatch/model/scoreboard.ts"],"names":[],"mappings":";;;;;;;;;;;;;;YAEA;gBAMI;oBACI,IAAI,CAAC,MAAM,GAAG,IAAI,gCAAc,EAAa,CAAC;oBAC9C,IAAI,CAAC,IAAI,GAAG,IAAI,sBAAS,EAAE,CAAC;oBAC5B,IAAI,CAAC,KAAK,GAAG,IAAI,gCAAc,EAAa,CAAC;gBACjD,CAAC;gBACL,iBAAC;YAAD,CAAC,AAXD,IAWC;YAXD,mCAWC,CAAA"}
